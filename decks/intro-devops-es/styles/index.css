@@ -1,0 +1,224 @@
+@import "../../../shared/styles/theme.css";
+
+.intro-devops-es {
+  --iceberg-deep: #0f4c81;
+  --iceberg-mid: #2f80c5;
+  --iceberg-light: #dff7ff;
+  --iceberg-line: rgba(15, 76, 129, 0.18);
+}
+
+.intro-devops-es .cover-title {
+  max-width: 1040px;
+}
+
+.intro-devops-es .cover-title-accent {
+  display: block;
+}
+
+.intro-devops-es .slidev-layout {
+  color: var(--deck-ink);
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.concept-card {
+  min-height: 176px;
+  padding: 22px;
+  border: 1px solid var(--deck-line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--deck-panel) 90%, white);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.concept-card span,
+.step-chip span,
+.small-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--deck-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.concept-card strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 1.34rem;
+  line-height: 1.1;
+}
+
+.concept-card small {
+  display: block;
+  margin-top: 12px;
+  color: var(--deck-muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.myth-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.myth-card {
+  padding: 18px 20px;
+  border: 1px solid var(--deck-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.myth-card strong {
+  display: block;
+  color: var(--deck-rose);
+  font-size: 1.08rem;
+}
+
+.myth-card span {
+  display: block;
+  margin-top: 8px;
+  color: var(--deck-muted);
+  line-height: 1.35;
+}
+
+.pipeline-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.step-chip {
+  min-height: 118px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--deck-line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(236,248,255,0.84));
+}
+
+.step-chip strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.step-chip small {
+  display: block;
+  margin-top: 7px;
+  color: var(--deck-muted);
+  line-height: 1.25;
+}
+
+.two-column-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 34px;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.explain-list {
+  display: grid;
+  gap: 14px;
+}
+
+.explain-list article {
+  padding: 16px 18px;
+  border-left: 4px solid var(--deck-blue);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 12px 26px rgba(15,23,42,0.06);
+}
+
+.explain-list strong {
+  display: block;
+  font-size: 1.04rem;
+}
+
+.explain-list small {
+  display: block;
+  margin-top: 6px;
+  color: var(--deck-muted);
+  line-height: 1.35;
+}
+
+.cert-placeholder {
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px dashed color-mix(in srgb, var(--deck-blue) 48%, white);
+  border-radius: 8px;
+  background: rgba(239, 248, 255, 0.76);
+}
+
+.cert-placeholder strong {
+  display: block;
+  font-size: 1.22rem;
+}
+
+.cert-placeholder span {
+  display: inline-flex;
+  margin: 14px 10px 0 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: white;
+  color: var(--deck-muted);
+  border: 1px solid var(--deck-line);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.final-model {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.final-model strong {
+  min-height: 78px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--deck-ink);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.qa-frame {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.qa-frame .question-mark {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: radial-gradient(circle at 28% 24%, rgba(34, 211, 238, 0.28), transparent 36%),
+    linear-gradient(135deg, #0f172a, #164e63);
+  color: #ffffff;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.qa-frame ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--deck-muted);
+  font-size: 1rem;
+  line-height: 1.48;
+}

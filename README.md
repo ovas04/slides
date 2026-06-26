@@ -95,6 +95,7 @@ scripts/
 | Deck | Purpose | Command |
 | --- | --- | --- |
 | `github-enterprise-platform` | Main talk about GitHub as an enterprise platform. | `make dev DECK=github-enterprise-platform` |
+| `intro-devops-es` | Spanish introduction to DevOps, DevSecOps, Platform Engineering, and learning path. | `make dev DECK=intro-devops-es` |
 | `platform-engineering-that-teams-actually-adopt` | Internal platform engineering adoption and operating-model talk. | `make dev DECK=platform-engineering-that-teams-actually-adopt` |
 | `component-showcase` | Reference deck for the current component and style catalog. | `make dev DECK=component-showcase` |
 
