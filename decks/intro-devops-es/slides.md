@@ -121,6 +121,37 @@ transition: slide-left
 
 <span class="kicker">Contexto</span>
 
+## DevOps empieza como cambio cultural
+
+<div class="media-split">
+  <div>
+    <p class="lead">Antes de ser pipelines, DevOps es un mindset: unir desarrollo y operaciones para compartir responsabilidad por el valor que llega a producción.</p>
+    <CalloutStack
+      :items="[
+        { label: 'Mindset', title: 'Responsabilidad compartida', detail: 'El servicio no termina cuando el código se mergea.', tone: 'blue' },
+        { label: 'Cultura', title: 'Colaboración sobre transferencia', detail: 'Menos pases de mano; más aprendizaje conjunto.', tone: 'green' },
+        { label: 'Sistema', title: 'Feedback corto', detail: 'Aprender rápido de build, pruebas, despliegue y operación.', tone: 'amber' }
+      ]"
+    />
+  </div>
+  <MediaFrame
+    src="media/devops-culture.png"
+    title="Equipo técnico colaborando"
+    caption="La unión cultural entre desarrollo y operaciones es la base."
+    alt="Grupo de personas de tecnología reunidas en un evento colaborativo"
+  />
+</div>
+
+<!--
+Notas: Empezar explícitamente aquí: DevOps nace como cambio cultural y mindset. La técnica viene después. El objetivo es unir desarrollo y operaciones para que ambos compartan responsabilidad por entregar y operar software con calidad.
+-->
+
+---
+transition: slide-left
+---
+
+<span class="kicker">Contexto</span>
+
 ## ¿Por qué nace DevOps?
 
 <TimelineFlow
@@ -222,14 +253,22 @@ transition: slide-up
 
 ## El ciclo de vida moderno del software
 
-<ArchitectureLayers
-  :layers="[
-    { label: 'Idea', title: 'Backlog y diseño', detail: 'Necesidad, alcance, experiencia, criterio de aceptación.', tone: 'blue' },
-    { label: 'Código', title: 'Repositorio y cambios', detail: 'Versionado, ramas, revisión, dependencias.', tone: 'green' },
-    { label: 'Entrega', title: 'Pipeline y ambientes', detail: 'Build, test, seguridad, artefacto, despliegue.', tone: 'amber' },
-    { label: 'Operación', title: 'Producción y aprendizaje', detail: 'Observabilidad, incidentes, SLO, mejora continua.', tone: 'rose' }
-  ]"
-/>
+<div class="media-split compact-media">
+  <ArchitectureLayers
+    :layers="[
+      { label: 'Idea', title: 'Backlog y diseño', detail: 'Necesidad, alcance, experiencia, criterio de aceptación.', tone: 'blue' },
+      { label: 'Código', title: 'Repositorio y cambios', detail: 'Versionado, ramas, revisión, dependencias.', tone: 'green' },
+      { label: 'Entrega', title: 'Pipeline y ambientes', detail: 'Build, test, seguridad, artefacto, despliegue.', tone: 'amber' },
+      { label: 'Operación', title: 'Producción y aprendizaje', detail: 'Observabilidad, incidentes, SLO, mejora continua.', tone: 'rose' }
+    ]"
+  />
+  <MediaFrame
+    src="media/software-delivery.jpg"
+    title="Infraestructura de entrega"
+    caption="El software vive en un sistema técnico y operativo."
+    alt="Sala de servidores que representa el recorrido del software hasta producción"
+  />
+</div>
 
 <!--
 Notas: Mostrar que DevOps atraviesa todo el ciclo, no solo la parte final. Para entender DevOps hay que entender cómo se construye una aplicación y cómo se mueve entre ambientes.
@@ -445,16 +484,22 @@ transition: slide-up
 
 ## Cloud: capacidades que debes reconocer
 
-<IconGrid
-  :items="[
-    { icon: 'IAM', title: 'Identidad', detail: 'Quién puede hacer qué.', tone: 'blue' },
-    { icon: 'NET', title: 'Redes', detail: 'Conectividad, exposición y segmentación.', tone: 'green' },
-    { icon: 'CPU', title: 'Cómputo', detail: 'Dónde corre la carga.', tone: 'amber' },
-    { icon: 'STO', title: 'Storage', detail: 'Persistencia y respaldo.', tone: 'rose' },
-    { icon: 'DB', title: 'Datos', detail: 'Bases de datos y consistencia.', tone: 'blue' },
-    { icon: 'COST', title: 'Costos', detail: 'Consumo, límites y optimización.', tone: 'green' }
-  ]"
-/>
+<div class="media-split compact-media">
+  <IconGrid
+    :items="[
+      { icon: 'IAM', title: 'Identidad', detail: 'Quién puede hacer qué.', tone: 'blue' },
+      { icon: 'NET', title: 'Redes', detail: 'Conectividad y exposición.', tone: 'green' },
+      { icon: 'CPU', title: 'Cómputo', detail: 'Dónde corre la carga.', tone: 'amber' },
+      { icon: 'DB', title: 'Datos', detail: 'Bases y persistencia.', tone: 'rose' }
+    ]"
+  />
+  <MediaFrame
+    src="media/cloud-operations.jpg"
+    title="Operación cloud"
+    caption="Cloud combina infraestructura, identidad, red, datos, monitoreo y costos."
+    alt="Racks de servidores en un data center moderno"
+  />
+</div>
 
 <!--
 Notas: Mantenerlo vendor-neutral. No importa si luego la persona usa AWS, Azure, GCP u otra nube; estos bloques conceptuales aparecen en todas.

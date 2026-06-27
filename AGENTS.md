@@ -55,6 +55,7 @@ this repo.
 8. For new decks or substantial visual changes, inspect every slide and visible
    click/state at 1440x900 when a local server is available. For small isolated
    visual edits, inspect every changed slide plus adjacent/risky slides.
+   Capture Slidev overview too when thumbnail overlap or clipping is reported.
 9. Validate the acceptance criteria before handoff and report any criterion
    that could not be verified.
 10. Use `slide-continuous-learning` to update the narrowest durable spec, skill,
@@ -82,9 +83,9 @@ needed, or an external policy/tool boundary genuinely requires approval.
 - Prefer existing tests and repo commands over new tooling. Add a new test only
   when it protects meaningful behavior or a reusable contract.
 - For slide and documentation work, use criteria-first validation when a classic
-  failing test is not practical: `make check`, browser screenshots, Mermaid
-  render checks, link/path checks, and focused visual inspection are acceptable
-  test surfaces.
+  failing test is not practical: `make check`, browser screenshots, overview
+  screenshots when useful, Mermaid render checks, link/path checks, and focused
+  visual inspection are acceptable test surfaces.
 - Do not mark work complete merely because files changed. Completion requires
   passing the selected checks or explicitly reporting the unverified gap.
 - Do not treat a deck as ready when it merely builds and avoids overlap. New or
@@ -169,6 +170,9 @@ kill a running dev server when the requested deck cannot be resolved.
   locally. Do not reuse one editorial image as multiple different assets merely
   by cropping or renaming it unless the brief intentionally defines that image
   as a repeated motif.
+- For editorial, teaching, keynote, strategy, storytelling, or human-centered
+  decks, include purposeful local image-bearing slides unless the brief
+  explicitly bans images.
 - Before creating a component, inspect `docs/component-catalog.md`.
 - Put generic, data-driven components in `shared/components/` when they can be
   reused across decks through props or slots.
@@ -337,6 +341,10 @@ kill a running dev server when the requested deck cannot be resolved.
   or permissions are not available.
 - Mockups should feel like product surfaces, but should avoid copying sensitive
   or private UI.
+- New or substantially changed decks must intentionally use the available
+  visual catalog where it clarifies the story: media frames, mockups, diagrams,
+  timelines, swimlanes, matrices, charts, or staged reveals should not be
+  skipped in favor of same-looking text slides.
 - Use grid-based top bars when badges sit next to long titles, so text cannot
   collide.
 - Use Vue components for diagrams, flows, dashboards, topology maps, radars,

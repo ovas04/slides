@@ -19,11 +19,168 @@
   color: var(--deck-ink);
 }
 
+.intro-devops-es h2 {
+  font-size: 2.38rem;
+  margin-bottom: 1rem;
+  max-width: 1180px;
+}
+
+.media-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.75fr);
+  gap: 24px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.media-split .lead {
+  font-size: 1.34rem;
+  line-height: 1.34;
+}
+
+.media-split .media-frame {
+  margin-top: 0;
+}
+
+.media-split .media-surface {
+  min-height: 300px;
+}
+
+.compact-media {
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
+}
+
+.compact-media .media-surface {
+  min-height: 260px;
+}
+
+.intro-devops-es .media-frame figcaption {
+  padding: 0.62rem 0.8rem;
+}
+
+.intro-devops-es .media-frame figcaption strong {
+  font-size: 0.78rem;
+}
+
 .concept-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-top: 34px;
+}
+
+.intro-devops-es .comparison-table {
+  margin-top: 0.75rem;
+}
+
+.intro-devops-es .comparison-row > * {
+  min-height: 48px;
+  padding: 0.5rem 0.62rem;
+}
+
+.intro-devops-es .comparison-row strong,
+.intro-devops-es .comparison-row span {
+  font-size: 0.72rem;
+  line-height: 1.14;
+}
+
+.intro-devops-es .architecture-layers {
+  margin-top: 0.45rem;
+}
+
+.intro-devops-es .architecture-layers article {
+  gap: 0.34rem;
+  min-height: 46px;
+  padding: 0.44rem 0.66rem;
+}
+
+.intro-devops-es .architecture-layers article strong {
+  font-size: 0.98rem;
+}
+
+.intro-devops-es .architecture-layers article small {
+  font-size: 0.74rem;
+  line-height: 1.18;
+}
+
+.intro-devops-es .browser-body {
+  min-height: 230px;
+}
+
+.intro-devops-es .browser-content article {
+  min-height: 112px;
+  padding: 0.78rem;
+}
+
+.intro-devops-es .browser-content article strong {
+  font-size: 1.05rem;
+}
+
+.intro-devops-es .browser-content article small {
+  font-size: 0.76rem;
+  line-height: 1.24;
+}
+
+.intro-devops-es .icon-grid {
+  gap: 0.7rem;
+  margin-top: 0.82rem;
+}
+
+.intro-devops-es .icon-grid article {
+  padding: 0.75rem;
+}
+
+.intro-devops-es .icon-grid article span {
+  height: 38px;
+  margin-bottom: 0.62rem;
+  width: 46px;
+}
+
+.intro-devops-es .icon-grid article strong {
+  font-size: 0.98rem;
+}
+
+.intro-devops-es .icon-grid article small {
+  font-size: 0.74rem;
+  line-height: 1.18;
+}
+
+.intro-devops-es .swimlane-row > * {
+  min-height: 50px;
+  padding: 0.42rem 0.58rem;
+}
+
+.intro-devops-es .swimlane-row span,
+.intro-devops-es .swimlane-row strong {
+  font-size: 0.74rem;
+  line-height: 1.12;
+}
+
+.intro-devops-es .callout-stack {
+  gap: 0.5rem;
+  margin-top: 0.72rem;
+}
+
+.intro-devops-es .callout-stack article {
+  gap: 0.36rem 0.62rem;
+  grid-template-columns: 112px 1fr 1fr;
+  min-height: 66px;
+  padding: 0.58rem 0.72rem;
+}
+
+.intro-devops-es .callout-stack article span {
+  font-size: 0.72rem;
+  line-height: 1.08;
+}
+
+.intro-devops-es .callout-stack article strong {
+  font-size: 1.02rem;
+  line-height: 1.08;
+}
+
+.intro-devops-es .callout-stack article small {
+  font-size: 0.76rem;
+  line-height: 1.18;
 }
 
 .concept-card {
@@ -121,18 +278,18 @@
 .two-column-visual {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 34px;
+  gap: 26px;
   align-items: center;
-  margin-top: 26px;
+  margin-top: 16px;
 }
 
 .explain-list {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .explain-list article {
-  padding: 16px 18px;
+  padding: 12px 16px;
   border-left: 4px solid var(--deck-blue);
   border-radius: 8px;
   background: rgba(255,255,255,0.78);
@@ -141,14 +298,15 @@
 
 .explain-list strong {
   display: block;
-  font-size: 1.04rem;
+  font-size: 0.98rem;
 }
 
 .explain-list small {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--deck-muted);
-  line-height: 1.35;
+  font-size: 0.8rem;
+  line-height: 1.24;
 }
 
 .two-column-visual > div > .cert-badges {

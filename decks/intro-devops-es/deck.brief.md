@@ -28,8 +28,8 @@ make check DECK=intro-devops-es.
 | Required points | Personal intro iceberg, problema que resuelve DevOps, silos previos, práctica real, mitos, DevOps/DevSecOps/Platform Engineering, desarrollo de software, ciclo de vida, CI/CD, workflows, contenedores, Kubernetes/OpenShift, IaC, artefactos, calidad, shift-left security, observabilidad, cloud, gobierno, platform engineering, ruta de aprendizaje y certificaciones |
 | Tone and context | Práctico, claro, humano, inspirador y profesional; charla educativa sin marketing excesivo |
 | Constraints | Sin demo en vivo; vendor-neutral cuando sea posible; todo en español; no inventar certificaciones; crear brief antes de slides; validar con `make check DECK=intro-devops-es`; desplegar localmente antes de push |
-| Available assets | Shared speaker data and QR in `data/speaker/`; user-provided certification list in chat |
-| Suggested assets policy | Use repo-native Vue/SVG for iceberg; use local components; no required external image dependency |
+| Available assets | Shared speaker data and QR in `data/speaker/`; user-provided certification list in chat; Wikimedia Commons editorial images downloaded locally |
+| Suggested assets policy | Use repo-native Vue/SVG for iceberg; use local components; use local source-noted editorial images where they clarify culture, lifecycle, and cloud operations |
 | Speaker profile | Use shared speaker data with deck-specific talk role/tags |
 | Deliverables | Slidev HTML deck, local validation, local preview before push |
 | Desired slug | `intro-devops-es` |
@@ -44,7 +44,8 @@ make check DECK=intro-devops-es.
 | Palette | `palette-crystal` |
 | Palette rationale | Crystal Day supports teaching, close reading, and a clean executive-tech visual language for a 60-minute introductory session |
 | Motion level | medium |
-| Media style | Vue/SVG iceberg, diagrams, architecture layers, icon grids, comparison table, mockups, maturity curve, callout stack |
+| Media style | Vue/SVG iceberg, local editorial images, diagrams, architecture layers, icon grids, comparison table, mockups, maturity curve, callout stack |
+| Image-bearing slides | DevOps mindset/culture, modern software lifecycle, cloud capabilities |
 | Visual rhythm | cover, iceberg sequence, speaker profile, agenda, problem framing, quote, comparison, lifecycle layers, swimlane, browser mockups, icon grids, maturity curve, close/Q&A |
 
 ## Assumptions
@@ -53,7 +54,8 @@ make check DECK=intro-devops-es.
 - The user later provided a certification list. The deck highlights the most relevant credentials for a DevOps/DevSecOps/Platform Engineering session as compact visual badges instead of a full text list.
 - The two iceberg slides use a deck-local Vue/SVG illustration instead of an external image so both states stay aligned and render offline.
 - The deck includes both the requested personal introduction slides and the repository-required data-driven speaker profile slide.
-- The deck targets 28 slides with the final 10-15 minutes reserved for Q&A.
+- After visual QA feedback, the opening explicitly frames DevOps as a mindset and cultural change that unites development and operations before introducing tools.
+- The deck targets 29 slides with the final 10-15 minutes reserved for Q&A.
 
 ## Questions Resolved Before Execution
 
@@ -102,6 +104,8 @@ Acceptance:
 - Given screenshots of every slide and visible click/state
 - When inspected at 1440x900
 - Then there is no clipped text, overlapping essential content, unreadable contrast, broken renderer, or underused component opportunity
+- And image-bearing slides use local, source-noted assets selected for their
+  semantic role
 
 ### Build And Local Preview
 
@@ -118,7 +122,7 @@ Acceptance:
 | Section | Purpose | Slide Count |
 | --- | --- | --- |
 | Opening | Set promise and human credibility | 4 |
-| Foundations | Explain why DevOps exists and what it is not | 5 |
+| Foundations | Explain DevOps as cultural change, why it exists, and what it is not | 6 |
 | Delivery system | Show how software travels to production | 5 |
 | Capabilities | Cover infrastructure, artifacts, quality, security, observability, and cloud | 8 |
 | Evolution | Connect DevOps to developer experience and Platform Engineering | 3 |
@@ -131,6 +135,9 @@ Acceptance:
 | --- | --- | --- | --- |
 | Iceberg visual | Deck-local Vue/SVG component | `decks/intro-devops-es/components/IcebergJourney.vue` | Generated as source code; no external license |
 | Speaker QR | Shared speaker data | `data/speaker/linkedin-qr.svg` | Existing repository asset |
+| DevOps culture image | Wikimedia Commons | `decks/intro-devops-es/public/media/devops-culture.png` | Source-noted in `public/media/README.md` |
+| Software delivery image | Wikimedia Commons | `decks/intro-devops-es/public/media/software-delivery.jpg` | Source-noted in `public/media/README.md` |
+| Cloud operations image | Wikimedia Commons | `decks/intro-devops-es/public/media/cloud-operations.jpg` | Source-noted in `public/media/README.md` |
 
 ## Component Plan
 
@@ -154,12 +161,13 @@ Acceptance:
 - `make check DECK=intro-devops-es`
 - Local preview with `make dev DECK=intro-devops-es PORT=4100` or another available port
 - Screenshot review at 1440x900 for every slide and visible click/state
+- Slidev overview screenshot review because previous feedback showed thumbnail overlap/clipping
 - Explicitly check cover, iceberg slides, speaker profile, comparison, lifecycle, CI/CD mockup, observability mockup, learning path, close, Q&A, and navigation
 - No remote dependency for essential rendering
 
 ## Handoff Notes
 
-- Commands run: `make check DECK=intro-devops-es`; `make dev DECK=intro-devops-es PORT=4100`; Playwright screenshot pass at 1440x900 across 52 visible states.
-- Files changed: `decks/intro-devops-es/`, `README.md`, `.github/workflows/deploy.yml`.
+- Commands run: `git diff --check`; `npm run check:agent`; `make check DECK=intro-devops-es`; `make dev DECK=intro-devops-es PORT=4100`; Playwright screenshot pass at 1440x900 across 53 visible states; Slidev overview screenshot capture.
+- Files changed: `decks/intro-devops-es/`, `AGENTS.md`, `.agents/skills/`, and deck-generation/visual-QA docs.
 - Known limitations: certification badges are deck-local visual badges using compact code/issuer marks, not official third-party badge artwork.
 - Follow-up ideas: replace visual marks with official certification badge artwork if the speaker provides approved image assets; validate the exact public organization label for DevSecOps Village before public delivery.

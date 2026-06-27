@@ -11,6 +11,9 @@ complete, validated deck without relying on chat memory.
 - Ask when critical information is missing.
 - Record assumptions in the brief.
 - Store deck-owned media locally under `decks/<slug>/public/media/`.
+- Use purposeful local images or media when the talk direction is editorial,
+  teaching, keynote, strategy, storytelling, or human-centered, unless the
+  brief explicitly bans images.
 - Follow `AGENTS.md`, `docs/slide-guidelines.md`,
   `docs/component-catalog.md`, and `docs/style-catalog.md`.
 - Use repo-shipped skills from `.agents/skills/` when available.
@@ -52,9 +55,10 @@ normal deck creation. A local `deck.brief.md` is enough for this use case.
 
 5. **Plan**
    Define narrative, approximate slide count, background mode, palette,
-   components, visual rhythm, asset strategy, validation surface, and
-   assumptions that will govern execution. Map the story to existing component
-   catalog modules before deciding that custom layouts are needed.
+   components, visual rhythm, image/media plan, asset strategy, validation
+   surface, and assumptions that will govern execution. Map the story to
+   existing component catalog modules before deciding that custom layouts are
+   needed.
 
 6. **Tasks**
    Break the plan into concrete tasks: scaffold, content, components, media,
@@ -114,6 +118,8 @@ A generated deck satisfies this workflow when:
 - it reuses the catalog before creating new components;
 - it uses varied slide compositions, suitable media/diagrams, and purposeful
   staging or motion instead of long static text runs;
+- it includes purposeful local image-bearing slides when the visual direction
+  calls for them and does not explicitly ban images;
 - it includes enough frontmatter for the home page;
 - it includes title/cover, speaker profile, and final close/Q&A slides;
 - it passes `make check DECK=<slug>`;

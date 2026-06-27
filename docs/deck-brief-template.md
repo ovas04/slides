@@ -42,6 +42,7 @@ identified earlier.
 | Palette rationale | <why it fits the audience, tone, and topic> |
 | Motion level | <low, medium, high> |
 | Media style | <screenshots, generated images, diagrams, ECharts, Mermaid, 3D> |
+| Image-bearing slides | <which slides should use local images/media, or "none: explicitly banned"> |
 | Visual rhythm | <mix of title, section, diagram, chart, mockup/media, comparison, text> |
 
 If the user does not provide a visual direction and allows the agent to infer,
@@ -104,6 +105,8 @@ Acceptance:
 - Then there is no clipped text or unreadable essential content
 - And the deck does not rely on long runs of same-looking text slides when
   catalog components, diagrams, media, or staged reveals would clarify the idea
+- And image-bearing slides render local, source-noted assets when the visual
+  direction calls for images and does not explicitly ban them
 
 ### Build
 
@@ -149,6 +152,8 @@ component only when the catalog does not already support the slide's job.
   navigation states explicitly checked
 - Visual rhythm checked: repeated layouts, underused existing components,
   missing media/diagrams, and motion/reveal choices reviewed against the brief
+- Image-bearing slides checked for local rendering, semantic fit, source notes,
+  and contrast-preserving crops/overlays
 - Navigation visible in play mode
 - No remote dependency for essential rendering
 

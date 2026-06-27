@@ -17,6 +17,9 @@ These guidelines are the shared design and content baseline for future
 - Plan visual rhythm across the deck. A strong deck should mix title/section
   slides, data visuals, diagrams, mockups/media, comparison or decision
   surfaces, and short text slides when the topic supports them.
+- For editorial, teaching, keynote, strategy, storytelling, or human-centered
+  decks, include purposeful local image-bearing slides unless the brief
+  explicitly bans images.
 - Avoid one-note palettes. Combine accents semantically.
 - Do not use decorative overlays that reduce text contrast.
 - Keep cards at 8px radius unless a component has a specific reason.
@@ -116,6 +119,8 @@ These guidelines are the shared design and content baseline for future
 - Record source and license notes for external assets.
 - Treat image search as part of creating any image-bearing slide: choose the
   asset for the slide's semantic role, not as generic decoration.
+- Do not ship a new image-friendly deck with zero image-bearing slides unless
+  the brief explicitly says images are forbidden.
 - Select each editorial image for a specific slide purpose. Do not duplicate
   one source image across multiple roles merely by cropping or renaming it
   unless the deck intentionally uses it as a repeated motif.
@@ -161,6 +166,8 @@ These guidelines are the shared design and content baseline for future
 - Run `make check DECK=<slug>` after meaningful deck changes.
 - For new decks or substantial visual changes, inspect every slide and visible
   click/state at 1440x900 before handoff.
+- If Slidev overview thumbnails reveal overlap or clipped content, capture and
+  inspect the overview in addition to full-size slide screenshots.
 - For small isolated visual edits, inspect every changed slide plus adjacent or
   risky slides at 1440x900.
 - For reusable components, inspect light and dark contexts when relevant.

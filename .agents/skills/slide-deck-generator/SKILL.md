@@ -8,11 +8,11 @@ description: Create or substantially modify Slidev-style slide decks from a user
 ## Workflow
 
 1. Inspect the repository conventions before editing. Prefer existing agent specs, deck templates, component catalogs, style catalogs, and generation workflow docs when present.
-2. Define acceptance criteria before implementation. Include content completeness, required structural slides, audience fit, visual quality, visual rhythm/dynamism, background mode, asset handling, navigation/export behavior, and validation commands.
+2. Define acceptance criteria before implementation. Include content completeness, required structural slides, audience fit, visual quality, visual rhythm/dynamism, image/media usage, background mode, asset handling, navigation/export behavior, and validation commands.
 3. Complete the question window before implementation. Gather intake for topic/title, audience, audience level, duration, desired outcome, required points, tone/context, constraints, visual background mode, and deliverables. Ask only when critical data is missing or contradictory, and ask all known questions here instead of pausing later for preferences.
 4. Create or update the deck brief when the repo has a brief template or generation workflow. Record assumptions, asset plan, validation plan, and handoff notes.
 5. Reuse the local deck template, shared components, palette system, and media conventions. Put deck-specific media under the deck's local public/media folder or equivalent local asset tree. Before inventing layouts, map the narrative to available catalog modules such as mockups, metrics, timelines, swimlanes, matrices, charts, media frames, architecture layers, and speaker/profile components.
-6. Use local/rendered assets. When a slide calls for an image, make image search and selection part of the implementation: search reputable free-media sources such as Pexels/Unsplash/Pixabay or SVG Repo, choose an asset that matches that slide's specific purpose, download it, keep source/license notes, and render it locally. Do not reuse the same editorial image as multiple “different” assets unless the brief explicitly calls for a repeated visual motif.
+6. Use local/rendered assets. When a slide calls for an image, or when the brief asks for an editorial, keynote, teaching, storytelling, or human-centered visual style and does not ban images, make image search and selection part of the implementation: search reputable free-media sources such as Pexels/Unsplash/Pixabay, Wikimedia Commons, or SVG Repo, choose an asset that matches that slide's specific purpose, download it, keep source/license notes, and render it locally. Do not reuse the same editorial image as multiple "different" assets unless the brief explicitly calls for a repeated visual motif.
 7. Implement in small slices. Keep generic reusable components shared; keep event/product-specific visuals deck-local.
 8. Design for a varied presentation rhythm. A new deck should normally mix title/section slides, diagrams, data visualizations, mockups/media, decision or comparison surfaces, and concise text slides. Use `v-click`, `v-motion`, ECharts entry animation, or separate reveal states to stage dense ideas when it improves delivery; avoid motion that is decorative, looping, or incompatible with the intended export.
 9. For animated analytical visuals, prefer the repo's chart wrapper or equivalent ECharts pattern when the slide needs magnitude, comparison, weighted flow, heatmap, funnel, radar, hierarchy, custom graphic animation, or value transitions. Keep labels short, put explanation in captions/insights, declare useful entry animation in the chart option, and use the chart wrapper's sequence/update mechanism for before/after or baseline/target transitions. Prefer one-shot `enter` playback that finishes static; use click-capable triggers only for intentional in-slide steps in the Slidev web runtime.
@@ -37,6 +37,9 @@ Before editing, write a short checklist in the working notes:
 - Visual rhythm: the deck uses the component catalog deliberately, avoids long
   runs of same-looking slides, and includes purposeful staging or motion where
   it helps the speaker explain the idea.
+- Images/media: decks with editorial, teaching, keynote, strategy, or
+  storytelling direction include purposeful image-bearing slides unless the
+  brief explicitly bans images.
 - Assets: any image-bearing slide uses a searched or user-supplied asset selected for that slide role; media is local, organized, licensed/source-noted, and referenced with stable paths.
 - Validation: build/check command passes; screenshots verify every slide for new decks and verify dynamic renderers such as Mermaid, ECharts/charts, iframes, videos, or 3D scenes.
 

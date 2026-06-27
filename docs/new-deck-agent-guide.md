@@ -96,22 +96,28 @@ Non-critical fields that may be inferred and documented:
 16. Choose visuals from the catalog: mockup, metric, table, matrix, hierarchy,
     graph, sequence, timeline, swimlane, media, quote, layers, 3D, Mermaid, or
     ECharts.
-17. Whenever a slide needs an image, search proactively for SVG Repo icons and
-    editorial images from Pexels, Unsplash, Pixabay, or similar sources.
-    Choose a distinct source image for each distinct slide role unless the
-    brief intentionally calls for a repeated motif. Download everything into
+17. For editorial, keynote, teaching, storytelling, strategy, or
+    human-centered decks, include purposeful image-bearing slides unless the
+    brief explicitly bans images.
+18. Whenever a slide needs an image, or the visual direction above applies,
+    search proactively for SVG Repo icons and editorial images from Pexels,
+    Unsplash, Pixabay, Wikimedia Commons, or similar sources. Choose a distinct
+    source image for each distinct slide role unless the brief intentionally
+    calls for a repeated motif. Download everything into
     `decks/<slug>/public/media/` and record source/license notes.
-18. Use `TypingTitle` only on covers or key section breaks.
-19. Aim for 24-32 slides for a 30-minute talk unless the brief says otherwise.
-20. Validate with `make check DECK=<slug>`.
-21. Inspect screenshots of every slide and visible click/state at 1440x900.
+19. Use `TypingTitle` only on covers or key section breaks.
+20. Aim for 24-32 slides for a 30-minute talk unless the brief says otherwise.
+21. Validate with `make check DECK=<slug>`.
+22. Inspect screenshots of every slide and visible click/state at 1440x900.
     Confirm at least the cover, speaker profile, section breaks, dense slides,
     media/mockup/chart slides, closing, Q&A, and navigation have no overlap,
     clipping, unreadable contrast, or section markers that look like render
     artifacts.
-22. Update `deck.brief.md` with final handoff notes.
-23. Add the stable deck slug to the **Deploy Slides** workflow dropdown.
-24. Update README and catalogs when reusable components, styles, or workflows
+23. Capture Slidev overview too when thumbnails show or previously showed
+    clipped or overlapping content.
+24. Update `deck.brief.md` with final handoff notes.
+25. Add the stable deck slug to the **Deploy Slides** workflow dropdown.
+26. Update README and catalogs when reusable components, styles, or workflows
     change.
 
 ## ECharts Criteria

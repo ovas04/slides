@@ -1,0 +1,8 @@
+# Media Sources
+
+- `devops-culture.png`: Wikimedia Commons, "Wikimedia Developer Summit 2017 Group Photo", downloaded via Commons redirect. Used as an editorial image for DevOps culture and collaboration. Source: <https://commons.wikimedia.org/wiki/File:Wikimedia_Developer_Summit_2017_Group_Photo.png>
+- `cloud-operations.jpg`: Wikimedia Commons, "Datacenter Server Racks (22370909788)", downloaded via Commons redirect. Used as an editorial image for cloud and operations. Source: <https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg>
+- `software-delivery.jpg`: Wikimedia Commons, "Cern datacenter", downloaded via Commons redirect. Used as an editorial image for software delivery infrastructure. Source: <https://commons.wikimedia.org/wiki/File:Cern_datacenter.jpg>
+
+Images are stored locally so the deck renders offline. Replace them with
+approved event or speaker-owned images if stronger assets become available.
