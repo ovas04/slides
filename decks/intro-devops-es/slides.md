@@ -54,7 +54,7 @@ transition: fade
 />
 
 <!--
-Notas: Usar esta slide para establecer credibilidad sin convertirla en una lista de trofeos. Aclarar que DevSecOps Village queda con el nombre entregado y debe validarse si el speaker desea otra formulación exacta. Si el speaker entrega una imagen oficial de certificaciones, ubicarla en esta slide como asset real, no como lista inferida.
+Notas: Usar esta slide para establecer credibilidad sin convertirla en una lista de trofeos. Aclarar que DevSecOps Village queda con el nombre entregado y debe validarse si el speaker desea otra formulación exacta. Si el speaker entrega una imagen oficial de certificaciones, guardarla en `public/media/certifications-strip.png` y ubicarla en esta slide como asset real, no como lista inferida.
 -->
 
 ---
@@ -285,7 +285,7 @@ transition: slide-left
 <div class="cicd-spine-hero">
   <MediaFrame
     class="cicd-spine-media"
-    src="media/cicd-pipeline.svg"
+    src="media/cicd-pipeline.png"
     fit="contain"
     title=""
     alt="Diagrama de CI/CD con las etapas code, build, test, secure, package, release, deploy, operate y feedback operativo"

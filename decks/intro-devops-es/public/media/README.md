@@ -4,6 +4,8 @@
 - `cloud-operations.jpg`: Wikimedia Commons, "Datacenter Server Racks (22370909788)", downloaded via Commons redirect. Used as an editorial image for cloud and operations. Source: <https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg>
 - `software-lifecycle.svg`: deck-local SVG diagram created for this presentation. Used as the modern software lifecycle visual on slide 12. No external artwork is embedded.
 - `cicd-pipeline.svg`: deck-local SVG diagram created for this presentation after evaluating external CI/CD image options. Used as the core visual for the CI/CD spine slide. No external artwork is embedded.
+- `cicd-pipeline.png`: raster export of `cicd-pipeline.svg`. Used on slide 13 so the CI/CD spine appears as a concrete local image asset.
+- Expected user-provided asset: `certifications-strip.png`, a real certification badge strip for slide 2. Do not recreate or infer this asset.
 
 Images are stored locally so the deck renders offline. Replace them with
 approved event or speaker-owned images if stronger assets become available.
